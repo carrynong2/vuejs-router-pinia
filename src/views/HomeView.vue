@@ -1,14 +1,17 @@
 <script setup>
-import { RouterLink } from 'vue-router';
+  import { RouterLink } from 'vue-router';
+  import {useUserStore} from "../stores/user"
+  const userStore = useUserStore()
 </script>
 
 <template>
   <div>
     Hello Home
-    <RouterLink :to="{name: 'profile-edit', params: {id: 1}}">
-      <button>
-       Home
-      </button>
-    </RouterLink>
+    <div>
+      Your profile
+      <div>Firstname: {{ userStore.firstname }}</div>
+      <div>Lastname: {{ userStore.lastname }}</div>
+      <div>Fullname: {{ userStore.fullname }}</div>
+    </div>
   </div>
 </template>
