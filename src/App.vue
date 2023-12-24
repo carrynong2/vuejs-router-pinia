@@ -4,11 +4,6 @@
 
 <template>
   <div>
-    <div>
-      Page: 
-      <RouterLink to="/home">Home</RouterLink>
-      <RouterLink to="/profile" style="margin-left: 50px;">Profile</RouterLink>
-    </div>
     <RouterView />
   </div>
 </template>
